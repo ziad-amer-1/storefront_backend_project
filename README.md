@@ -97,7 +97,8 @@ Before submitting your project, spin it up and test each endpoint. If each one r
 
 - Making a CRUD operation that interacts with the database.
 - you can make an order product to the database using order_id, product_id and quantity_of_each_product .
-- you should make sure that there is a user, order and product item in their tables 
+- you should make sure that there is a user, order and product item in their tables
+
 ---
 
 ## Handlers :-
@@ -111,3 +112,17 @@ Before submitting your project, spin it up and test each endpoint. If each one r
 - making a unit test for each model that interacts with the database and each route
 - testing the models: that mean test each operation from CRUD operations
 - testing the endpoints (routes): that mean test each route
+
+### env
+
+PORT=3000
+ENV=dev
+POSTGRES_HOST=localhost
+POSTGRES_PORT=5432
+POSTGRES_DB=storefront
+POSTGRES_DB_TEST=test_storefront
+POSTGRES_USER=ziad
+POSTGRES_PASSWORD=ziad
+BCRYPT_PASSWORD=speek-friend-and-enter
+SALT_ROUNDS=10
+TOKEN_SECRET=your-secret-token
