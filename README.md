@@ -62,7 +62,7 @@ Before submitting your project, spin it up and test each endpoint. If each one r
 
 ---
 
-## Important Commands
+## Important Commands and Instructions
 
 - npm run start ---> to start your server running for oe time
 - npm run server ---> to run your server automatically looking for changes
@@ -72,6 +72,9 @@ Before submitting your project, spin it up and test each endpoint. If each one r
 - npm run db-migrate-down ---> to run your migrations down
 - npm run format ---> to format your code using prettier
 - npm run lint ---> to format your code using eslint
+
+- database working on port 5432 and host localhost
+- go to database.json you will see that i add that manually you can change that
 
 ---
 
@@ -115,14 +118,14 @@ Before submitting your project, spin it up and test each endpoint. If each one r
 
 ### env
 
-PORT=3000
-ENV=dev
-POSTGRES_HOST=localhost
-POSTGRES_PORT=5432
-POSTGRES_DB=storefront
-POSTGRES_DB_TEST=test_storefront
-POSTGRES_USER=ziad
-POSTGRES_PASSWORD=ziad
-BCRYPT_PASSWORD=speek-friend-and-enter
-SALT_ROUNDS=10
-TOKEN_SECRET=your-secret-token
+PORT=3000 <br />
+ENV=dev <br />
+POSTGRES_HOST=localhost <br />
+POSTGRES_PORT=5432 <br />
+POSTGRES_DB=storefront <br />
+POSTGRES_DB_TEST=test_storefront <br />
+POSTGRES_USER=ziad <br />
+POSTGRES_PASSWORD=ziad <br />
+BCRYPT_PASSWORD=speek-friend-and-enter <br />
+SALT_ROUNDS=10 <br />
+TOKEN_SECRET=your-secret-token <br />
