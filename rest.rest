@@ -1,0 +1,148 @@
+GET http://localhost:3000/api/users
+
+####
+
+GET http://localhost:3000/api/users/1
+
+###
+
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+  "firstname": "ziad",
+  "lastname": "amer",
+  "password": "ziad123"
+}
+
+###
+
+DELETE http://localhost:3000/api/users/1
+
+###
+
+
+PATCH http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+  "firstname": "ziadamer",
+  "lastname": "elmessery",
+  "password": "ziad123456",
+  "id": 1
+}
+
+####
+
+POST http://localhost:3000/api/users/authenticate
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImZpcnN0bmFtZSI6InppYWQiLCJsYXN0bmFtZSI6ImFtZXIiLCJwYXNzd29yZCI6InppYWQxMjMifSwiaWF0IjoxNjcxMjg3ODIzfQ.nY1Rz4wKyWD1t0RL5_KJXyP6bkYenwaP17Jg-daa3WQ
+Content-Type: application/json
+
+{
+  "firstname": "ziad",
+  "password": "ziad123"
+}
+
+##################################
+##################################
+
+GET http://localhost:3000/api/products
+
+###
+
+GET http://localhost:3000/api/products/1
+
+###
+
+POST http://localhost:3000/api/products/
+Content-type: application/json
+
+{
+  "name": "Iphone 18",
+  "price": 25000
+}
+
+###
+
+DELETE http://localhost:3000/api/products/1
+
+### 
+
+PATCH http://localhost:3000/api/products
+Content-Type: application/json
+
+{
+  "name": "ziadAmeris",
+  "price": 10,
+  "id": 3
+}
+
+##################################
+##################################
+
+GET http://localhost:3000/api/orders
+
+####
+
+GET http://localhost:3000/api/orders/1
+
+####
+
+POST http://localhost:3000/api/orders
+Content-Type: application/json
+
+{
+  "user_id": 1,
+  "status": "active"
+}
+
+####
+
+PATCH http://localhost:3000/api/orders
+Content-Type: application/json
+
+{
+  "user_id": 1,
+  "status": "complete",
+  "id": 3
+}
+
+####
+
+DELETE http://localhost:3000/api/orders/2
+
+##################################
+##################################
+
+GET http://localhost:3000/api/order_products
+
+####
+
+GET http://localhost:3000/api/order_products/1
+
+####
+
+POST http://localhost:3000/api/order_products
+Content-Type: application/json
+
+{
+  "order_id": 1,
+  "product_id": 1,
+  "quantity_of_each_product": 1
+}
+
+####
+
+DELETE http://localhost:3000/api/order_products/1
+
+#####
+
+PATCH http://localhost:3000/api/order_products
+Content-Type: application/json
+
+{
+  "order_id": 1,
+  "product_id": 1,
+  "quantity_of_each_product": 10,
+  "id": 1
+}
