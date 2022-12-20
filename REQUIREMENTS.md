@@ -25,6 +25,10 @@ These are the notes from a meeting with the frontend developer that describe wha
 - Current Order by user (args: user id)[token required]
 - [OPTIONAL] Completed Orders by user (args: user id)[token required]
 
+#### Order Prodcuts
+
+- Junction table for order and product that contains the order id and product id
+
 ## Data Shapes
 
 #### Product
@@ -48,6 +52,13 @@ These are the notes from a meeting with the frontend developer that describe wha
 - quantity of each product in the order -> number
 - user_id -> number
 - status of order (active or complete) -> string 'active' | 'completed'
+
+#### Order Products
+
+- id -> number
+- order_id -> number
+- product_id -> number
+- quantity_of_each_product -> number
 
 ---
 
