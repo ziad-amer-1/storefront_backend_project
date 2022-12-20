@@ -82,3 +82,18 @@ export const update = async (
     next(err)
   }
 }
+export const currentOrderByUser = async (
+  req: express.Request,
+  res: express.Response,
+  next: express.NextFunction
+) => {
+  try {
+    const currentOrderByUser = await orderModel.currentOrderByUser(req.body)
+    res.json({
+      data: currentOrderByUser,
+      status: 'Get Current Order Successfully'
+    })
+  } catch (err) {
+    next(err)
+  }
+}

@@ -8,5 +8,6 @@ routes.get('/:orderId', controllers.show)
 routes.post('/', controllers.create)
 routes.delete('/:orderId', controllers.remove)
 routes.patch('/', controllers.update)
+routes.get('/current-order', controllers.currentOrderByUser)
 
 export default routes

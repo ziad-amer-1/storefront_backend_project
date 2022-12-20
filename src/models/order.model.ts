@@ -31,10 +31,7 @@ export class OrderModel {
       const connection = await db.connect()
       const sql =
         'INSERT INTO orders (user_id, status) VALUES ($1, $2) RETURNING id, user_id, status'
-      const result = await connection.query(sql, [
-        order.user_id,
-        order.status
-      ])
+      const result = await connection.query(sql, [order.user_id, order.status])
       connection.release()
       return result.rows[0]
     } catch (err) {
@@ -63,15 +60,22 @@ export class OrderModel {
         UPDATE orders SET user_id = $1, status = $2 WHERE id = $3
         RETURNING id, user_id, status
       `
-      const result = await connection.query(sql, [
-        order.user_id,
-        order.status,
-        order.id
-      ])
+      const result = await connection.query(sql, [order.user_id, order.status, order.id])
       connection.release()
       return result.rows[0]
     } catch (err) {
       throw new Error(`Unable to Update Order with The id = ${order.id}`)
+    }
+  }
+  async currentOrderByUser(user_id: number): Promise<OrderType> {
+    try {
+      const connection = await db.connect()
+      const sql = `SELECT * FROM orders WHERE user_id = $1`
+      const result = await connection.query(sql, [user_id])
+      connection.release()
+      return result.rows[0]
+    } catch (err) {
+      throw new Error(`Unable to get the current order by user id = ${user_id}`)
     }
   }
 }
